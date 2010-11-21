@@ -86,10 +86,10 @@ syntax match cppNiceOperator "%>" conceal cchar=} " right brace
 syntax match cppNiceOperator "<:" conceal cchar=[ " left bracket
 syntax match cppNiceOperator ":>" conceal cchar=] " right bracket
 syntax match cppNiceOperator "%:" conceal cchar=# " number sign (also covers %:%: → ##)
-syntax match cppNiceOperator "and" conceal cchar=∧ " logical AND
-syntax match cppNiceOperator "or" conceal cchar=∨ " logical OR
-syntax match cppNiceOperator "not" conceal cchar=¬ " logical NOT
-syntax match cppNiceOperator "not_eq" conceal cchar=≠ " inequivalence
+syntax match cppNiceOperator "\<and\>" conceal cchar=∧ " logical AND
+syntax match cppNiceOperator "\<or\>" conceal cchar=∨ " logical OR
+syntax match cppNiceOperator "\<not\>" conceal cchar=¬ " logical NOT
+syntax match cppNiceOperator "\<not_eq\>" conceal cchar=≠ " inequivalence
 "and_eq " bitwise AND assignment
 "or_eq " bitwise OR assignment
 "xor_eq " bitwise XOR assignment
@@ -102,7 +102,7 @@ syntax match cppNiceOperator "not_eq" conceal cchar=≠ " inequivalence
 syntax match cppNiceOperator "\.\.\." conceal cchar=… " ellipsis
 
 " Unary functions/methods
-syntax match cppNiceOperator "\(std::\|\)sqrt" conceal cchar=√ " square root
+syntax match cppNiceOperator "\<\(std::\|\)sqrt\>" conceal cchar=√ " square root
 
 
 hi link cppNiceOperator Operator
