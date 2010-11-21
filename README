@@ -1,0 +1,68 @@
+vim-code-typography
+===================
+
+This collection of vim scripts uses the new conceal feature (available in vim
+7.3 and above) to replace some strings with more typographically pleasing
+versions.
+
+For example, the following C++ file:
+
+    #include <iostream>
+    #include <cmath>
+
+    int main(int argc, char* argv[]) {
+        std::cout << "I will calculate the length of a hypotenuse given the lengths" << std::endl;
+        std::cout << "of the other two legs of the triangle." << std::endl;
+
+        double a = 0.0;
+        std::cout << "Enter the length of the first leg: ";
+        std::cin >> a;
+
+        double b = 0.0;
+        std::cout << "And the length of the second leg: ";
+        std::cin >> b;
+
+        double c = std::sqrt(a * a + b * b);
+        std::cout << "The length of the hypotenuse is " << c << std::endl;
+        return 0;
+    }
+
+appears like this in vim:
+
+    #include <iostream>
+    #include <cmath>
+
+    int main(int argc, char* argv[]) {
+        std∷cout « "I will calculate the length of a hypotenuse given the lengths" « std∷endl;
+        std∷cout « "of the other two legs of the triangle." « std∷endl;
+
+        double a ← 0.0;
+        std∷cout « "Enter the length of the first leg: ";
+        std∷cin » a;
+
+        double b ← 0.0;
+        std∷cout « "And the length of the second leg: ";
+        std∷cin » b;
+
+        double c ← √(a×a + b×b);
+        std∷cout « "The length of the hypotenuse is " « c « std∷endl;
+        return 0;
+    }
+
+History
+-------
+
+This code was based on the vim-cute-python plugin (available at
+<https://github.com/ehamberg/vim-cute-python>).
+
+Future work
+-----------
+
+This is only a first draft (and I've never messed with vim's syntax
+highlighting before, so I'm sure there are better ways to go about this), so if
+you have any comments, suggestions, criticisms, etc., feel free to let me know.
+
+I'd also like to extend this to a variety of other languages.
+
+Kevin Godby <kevin@godby.org>
+
